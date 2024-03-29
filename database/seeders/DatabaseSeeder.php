@@ -16,16 +16,22 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->updateOrInsert([
-            'name' => 'admin',
             'email' => 'admin@example.com',
-            'password' => 'admin',
+            'password' => Hash::make('adminadmin'),
+            'password_check_status' => 'good'
+        ]);
+
+        DB::table('users')->updateOrInsert([
+            'email' => 'user@example.com',
+            'password' => Hash::make('useruser'),
+            'password_check_status' => 'good'
         ]);
 
         for ($i = 0; $i < 10; $i++)
             DB::table('users')->updateOrInsert([
-                'name' => Str::random(10),
                 'email' => Str::random(10) . '@example.com',
-                'password' => Hash::make(Str::random(random_int(8, 31))),
+                'password' => Hash::make(Str::random(random_int(8, 25))),
+                'password_check_status' => 'good'
             ]);
     }
 }

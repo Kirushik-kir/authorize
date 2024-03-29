@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\User\UserResource;
 use App\Models\User;
+use http\Env\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -49,11 +53,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:30'],
             'email' => ['required', 'string', 'email', 'max:100', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed', 'max:30'],
-            'client_id' => ['required', 'max:30'],
-            'api_key' => ['required', 'max:255']
+            'password' => ['required', 'confirmed', Password::min(8)->max(30)
+        ->letters()
+        ->mixedCase()
+        ->numbers()
+        ->symbols()],
         ]);
     }
 
@@ -61,16 +66,23 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\Models\User
      */
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'client_id' => $data['client_id'],
-            'api_key' => $data['api_key']
+            'password_check_status' => strlen($data['password']) <= 12 ? 'good' : 'perfect'
         ]);
+        //redirect(route('main'));
+//        return new UserResource(User::create(['email' => $data['email'],
+//            'password' => Hash::make($data['password'])]));
+        //return response()->json(['id'=>$user->id, 'email' => $user->email]);
+
+//        return new UserResource(User::create([
+//            'email' => $data['email'],
+//            'password' => Hash::make($data['password']),
+//        ]));
     }
 }
+// 11111Aa-

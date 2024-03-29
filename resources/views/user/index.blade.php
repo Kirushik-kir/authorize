@@ -1,15 +1,21 @@
 @extends('layouts.app')
 @section('content')
     <div>
-        @foreach($users as $user)
-            <div>
-                {{$user->id}}. {{$user->name}}:
-                <div>
-                    @foreach($user->products as $product)
-                        <div>{{$product->name}}</div>
-                    @endforeach
-                </div>
-            </div>
-        @endforeach
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">email</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($users as $user)
+            <tr>
+                <th scope="row">{{$user->id}}</th>
+                <td>{{$user->email}}</td>
+            </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection

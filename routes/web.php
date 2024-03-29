@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,25 +18,17 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/main', [\App\Http\Controllers\MainPageController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index'])->name('main');
+Route::get('/home', [\App\Http\Controllers\HomePageController::class, 'index'])->name('home')->middleware('auth');
 
 
 //users
-Route::get('/users', [\App\Http\Controllers\UserController::class, 'index']);
+Route::get('/users', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
 
 //registration
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//products
-Route::get('/products', [\App\Http\Controllers\Product\ProductController::class, 'index'])->name('product.index');
-Route::get('/products/create', [\App\Http\Controllers\Product\ProductController::class, 'create'])->name('product.create');
-Route::post('/products', [\App\Http\Controllers\Product\ProductController::class, 'store'])->name('product.store');
-Route::get('/products/{product}', [\App\Http\Controllers\Product\ProductController::class, 'show'])->name('product.show');
+Route::get('/authorize', function () {
+    return redirect('login');
+});
 
 

@@ -12,7 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table = 'viskye.users';
+    protected $table = 'eminem.users';
     protected $guarded = [];
 
     /**
@@ -21,11 +21,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'client_id',
-        'api_key',
-        'name',
         'email',
         'password',
+        'password_check_status'
     ];
 
     /**
@@ -36,6 +34,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'password_check_status'
     ];
 
     /**
@@ -48,8 +47,4 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-
-    public function products(){
-        return $this->hasMany(Product::class, 'user_id', 'id');
-    }
 }
