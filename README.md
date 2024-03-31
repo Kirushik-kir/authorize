@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://i.ibb.co/hVBLR6L/Pavuk.jpg" width="228">
+      <img src="[https://i.ibb.co/hVBLR6L/Pavuk.jpg](https://sun9-77.userapi.com/impg/639aaSPXHrVW0IGOwLpByNumDmSCc0s_5PbLfQ/8U890j59bxM.jpg?size=1280x1280&quality=95&sign=20bf3364f1285e2a7a721ea2c2f887da&type=album)" width="228">
 </p>
 
 ## About
