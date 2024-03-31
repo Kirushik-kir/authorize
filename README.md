@@ -15,10 +15,11 @@ Try the to run the Dockerfile with command
 ## Plan B
 
 In case of unsuccess with docker follow this commands:
--open the root folder of the project and run this command to create a new DB and tables
+<p> -open the root folder of the project and run this command to create a new DB and tables </p>
 <pre>php artisan make:database</pre>
 After? run the server with command
 <pre>php artisan serve</pre>
+
 
 ## Finishing the review
 to finish up the review and delete the Database? run this command
