@@ -1,10 +1,7 @@
-@extends('chipi_chapa.resources.views.layouts.app')
 
-@section('content')
     <div class="container" style="text-align: center;">
         <h1>KIRILL IVANOV</h1>
     <div>
-@endsection
 
 {{--        <div class="container" style="text-align: center;">--}}
 {{--            <h1>KIRILL IVANOV</h1>--}}
