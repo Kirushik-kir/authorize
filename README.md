@@ -15,9 +15,11 @@ Run these commands to run the app
 * ```docker compose exec app php artisan migrate```
 * ```docker compose exec app php artisan key:generate```
 
-## Review
 
-At first we need to register some user. Try this command in Postman:
+## endpoints
+* localhost/api/register
+* localhost/api/authorize
+* localhost/api/feed
 
 
 ## Developer
