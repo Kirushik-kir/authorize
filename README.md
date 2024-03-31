@@ -4,7 +4,7 @@
 
 ## About
 
-This is a laravel-project? which realize the api CRUD (login and authorize)
+This is a laravel-project, which realize the api CRUD (login and authorize)
 
 ## Plan A
 
@@ -17,8 +17,13 @@ Try the to run the Dockerfile with command
 In case of unsuccess with docker follow this commands:
 <p> -open the root folder of the project and run this command to create a new DB and tables </p>
 <pre>php artisan make:database</pre>
-After? run the server with command
+After, run the server with command
 <pre>php artisan serve</pre>
+<p>now the server is running on 127.0.0.1:8000</p>
+
+## Review
+
+At first we need to register some user. Try this command in Postman:
 
 
 ## Finishing the review
