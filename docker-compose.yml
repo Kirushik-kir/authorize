@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8181
+    depends_on:
+      - db
+  db:
+      restart: unless-stopped
+      ports:
+          -   3306:3306
+      image: mysql:5.7
+      environment:
+          MYSQL_ROOT_PASSWORD: Entity
+          MYSQL_DATABASE: eminem
+      volumes:
+          - ./data:/var/lib/mysql
