@@ -14,6 +14,8 @@ Run these commands to run the app
 * ```docker compose exec app composer install```
 * ```docker compose exec app php artisan migrate```
 * ```docker compose exec app php artisan key:generate```
+* ```docker compose exec app php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"```
+* ```docker compose exec app php artisan jwt:secret```
 
 
 ## endpoints
