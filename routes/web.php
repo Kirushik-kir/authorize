@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,21 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::get('/', [\App\Http\Controllers\MainPageController::class, 'index'])->name('main');
-Route::get('/home', [\App\Http\Controllers\HomePageController::class, 'index'])->name('home')->middleware('auth');
-
-
-//users
-Route::get('/users', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
-
-//registration
-Auth::routes();
-Route::get('/authorize', function () {
-    return redirect('login');
+Route::get('/', function () {
+    return view('welcome');
 });
-
-
