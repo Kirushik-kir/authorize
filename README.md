@@ -2,26 +2,27 @@
       <img src="https://i.ibb.co/hVBLR6L/Pavuk.jpg" width="228">
 </p>
 
-<p align="center">
-   <img src="https://img.shields.io/badge/java%20version-17%2B-blue" alt="java Version">
-   <img src="https://img.shields.io/badge/product%20version-1.0-yellow" alt="Game Version">
-   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
-</p>
-
 ## About
 
-This is a prototype of a new game. Take care of your spider! Feed him, play with him! Everything is the same, only in your phone on the well-known Telegram platform.
+This is a laravel-project? which realize the api CRUD (login and authorize)
 
-## Documentation
+## Plan A
 
-The structure of the application is quite simple, but it is very poorly built in terms of architecture and requires improvement.
+Try the to run the Dockerfile with command
+<pre>docker-compose up --build</pre>
 
-## Distribute
 
-Go there and try it yourself! [telegram](https://web.telegram.org/k/#@Chelovecheck_bot)
+## Plan B
 
-WARNING!!!
-These bot is unavailable most of time. But sometimes the programmers will put it on for different testings, competitions and etc.
+In case of unsuccess with docker follow this commands:
+-open the root folder of the project and run this command to create a new DB and tables
+<pre>php artisan make:database</pre>
+After? run the server with command
+<pre>php artisan serve</pre>
+
+## Finishing the review
+to finish up the review and delete the Database? run this command
+<pre>php artisan make:dropDatabase</pre>
 
 ## Developers
 
