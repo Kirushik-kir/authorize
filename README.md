@@ -6,34 +6,27 @@
 
 This is a laravel-project, which realize the api CRUD (login and authorize)
 
-## Plan A
+## Downloading
 
-Try the to run the Dockerfile with command
-<pre>docker-compose up --build</pre>
-
-
-## Plan B
-
-In case of unsuccess with docker follow this commands:
-<p> -open the root folder of the project and run this command to create a new DB and tables </p>
-<pre>php artisan make:database</pre>
-After, run the server with command
-<pre>php artisan serve</pre>
-<p>now the server is running on 127.0.0.1:8000</p>
+Run these commands to run the app
+* ```cp .env.example .env```
+* ```docker-compose up --build```
+* ```docker compose exec app composer install```
+* ```docker compose exec app php artisan migrate```
+* ```docker compose exec app php artisan key:generate```
 
 ## Review
 
 At first we need to register some user. Try this command in Postman:
 
 
-## Finishing the review
-to finish up the review and delete the Database? run this command
-<pre>php artisan make:dropDatabase</pre>
-
-## Developers
+## Developer
 
 Welcome to my Github!) [Kirill Ivanov](https://github.com/Kirushik-kir)
+Contacts:
+vk/tg: @kir_ll_great
+
 
 ## License
 
-This project (Spider-game-Telegram-bot) is distributed under the MIT license
+This project is distributed under the MIT license
