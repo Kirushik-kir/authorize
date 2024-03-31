@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://i.postimg.cc/c4cJQ7RC/2024-03-31-224436044.png" width="50%" height="50%" >
+      <img src="https://i.postimg.cc/c4cJQ7RC/2024-03-31-224436044.png" width="40%" height="40%" >
 </p>
 
 ## About
