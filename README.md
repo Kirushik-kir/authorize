@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://vk.com/im?peers=c27&sel=249023423" width="228">
+      <img src="[2024-03-31-224436044.png](https://postimg.cc/RNN9mHbx)">
 </p>
 
 ## About
