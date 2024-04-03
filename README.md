@@ -27,8 +27,8 @@ Run these commands to run the app
 ## Developer
 
 Welcome to my Github!) [Kirill Ivanov](https://github.com/Kirushik-kir)
-Contacts:
-vk/tg: @kir_ll_great
+<p>Contacts:</p>
+<p>vk/tg: @kir_ll_great</p>
 
 
 ## License
